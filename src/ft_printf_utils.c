@@ -6,7 +6,7 @@
 /*   By: bjimenez <bjimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/19 08:39:39 by bjimenez          #+#    #+#             */
-/*   Updated: 2022/05/20 20:46:08 by bjimenez         ###   ########.fr       */
+/*   Updated: 2022/05/20 13:05:04 by bjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_hex(unsigned int n, char c)
 		cad = "0123456789abcdef";
 	else if (c == 'X')
 		cad = "0123456789ABCDEF";
-	if (n < 16)
+	if (n < 16 && n >= 0)
 	{
 		write(1, &cad[n], 1);
 		n_char++;
@@ -69,7 +69,7 @@ int	ft_dirptr(unsigned long long p)
 
 	cad = "0123456789abcdef";
 	n_char = 0;
-	if (p < 16)
+	if (p < 16 && p >= 0)
 	{
 		write(1, "0x", 2);
 		write(1, &cad[p], 1);

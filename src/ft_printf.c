@@ -6,18 +6,11 @@
 /*   By: bjimenez <bjimenez@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/16 12:52:28 by bjimenez          #+#    #+#             */
-/*   Updated: 2022/05/20 13:15:55 by bjimenez         ###   ########.fr       */
+/*   Updated: 2022/05/23 09:27:05 by bjimenez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
-
-int		ft_p_str(char *str);
-int		ft_p_id(int n);
-int		ft_p_char(int c);
-int		ft_hex(unsigned int n, char c);
-int		ft_put_unbr(unsigned int n);
-int		ft_dirptr(unsigned long long p);
 
 int	ft_sel_type(char type, va_list pf)
 {
@@ -43,7 +36,6 @@ int	ft_sel_type(char type, va_list pf)
 		write(1, "%", 1);
 		n_char = 1;
 	}
-	va_end(pf);
 	return (n_char);
 }
 
